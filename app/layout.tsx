@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 export const metadata: Metadata = {
   title: 'メイクLAB | K-Beauty Portal',
-  description: 'メイクのやり方・コスメレビューの最新比較ランキング',
-  openGraph: { title: 'メイクLAB', description: 'メイクのやり方・コスメレビューの最新比較ランキング', siteName: 'K-Beauty Portal', type: 'website' },
-  twitter: { card: 'summary_large_image', title: 'メイクLAB', description: 'メイクのやり方・コスメレビューの最新比較ランキング', site: '@beauty_note_j' },
+  description: 'メイクの最新比較ランキング・口コミ・おすすめ商品',
+  twitter: { card: 'summary_large_image', site: '@beauty_note_j', creator: '@beauty_note_j' },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
