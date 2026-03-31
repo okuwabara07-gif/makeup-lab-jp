@@ -2,26 +2,16 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <p className="eyebrow">💋 K · BEAUTY PORTAL</p>
-        <h1 className="site-title">メイクLAB</h1>
+      <header style={{padding:'24px 24px 0',borderBottom:'0.5px solid #E8DDD8'}}>
+        <p style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'4px',color:'#C4B5AD',marginBottom:6}}>💋 K · BEAUTY PORTAL</p>
+        <h1 style={{fontFamily:"'Noto Serif JP',serif",fontSize:24,fontWeight:400,color:'#2C2420',fontStyle:'italic',paddingBottom:16}}>メイクLAB</h1>
       </header>
-      <nav style={{display:'flex',borderBottom:'0.5px solid #E8DDD8',overflowX:'auto'}}>
-        <Link href="/" style={{flex:1,minWidth:80,padding:'10px 8px',textAlign:'center',fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'2px',color:'#2C2420',borderBottom:'1px solid #2C2420',whiteSpace:'nowrap'}}>RANKING</Link>
-        <Link href="/blog" style={{flex:1,minWidth:80,padding:'10px 8px',textAlign:'center',fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'2px',color:'#C4B5AD',borderBottom:'1px solid transparent',whiteSpace:'nowrap'}}>ARTICLES</Link>
-        <Link href="/privacy" style={{flex:1,minWidth:80,padding:'10px 8px',textAlign:'center',fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'2px',color:'#C4B5AD',borderBottom:'1px solid transparent',whiteSpace:'nowrap'}}>PRIVACY</Link>
-      </nav>
-      <div className="portal-banner">
-        <p className="portal-banner-label">FEATURED</p>
-        <p className="portal-banner-title">AIパーソナルカラー診断 × 韓国コスメランキング</p>
-        <a href="https://beauty-portal-jp.vercel.app" target="_blank" className="portal-banner-link">BEAUTY PORTAL →</a>
+      <div style={{padding:'0 24px'}}>
+        <p style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'3px',color:'#C4B5AD',padding:'16px 0 10px',borderBottom:'0.5px solid #E8DDD8'}}>MAKEUP · TOP ARTICLES</p>
       </div>
-      <section style={{padding:'0 24px'}}>
-        <p className="section-label">メイク · TOP ARTICLES</p>
-      </section>
-      <footer className="site-footer">
+      <footer style={{padding:24,borderTop:'0.5px solid #E8DDD8',fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'2px',color:'#C4B5AD',display:'flex',justifyContent:'space-between'}}>
         <span>© 2026 AOKAE LLC</span>
-        <a href="https://beauty-portal-jp.vercel.app" target="_blank" className="footer-portal">BEAUTY PORTAL →</a>
+        <a href="https://beauty-portal-jp.vercel.app" target="_blank" style={{color:'#D4537E',borderBottom:'0.5px solid #D4537E'}}>BEAUTY PORTAL →</a>
       </footer>
     </main>
   );
