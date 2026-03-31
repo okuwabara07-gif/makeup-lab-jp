@@ -1,12 +1,17 @@
 import type { Metadata } from 'next';
+import './globals.css';
 export const metadata: Metadata = {
-  title: 'メイクLAB | K-Beauty Portal',
+  title: 'Makeup Lab',
   description: 'メイクのやり方・コスメレビューの最新比較ランキング',
+  twitter: { card: 'summary_large_image', site: '@beauty_note_j' },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body style={{margin:0,padding:0,background:'#FAFAF8'}}>{children}</body>
+      <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3460729726810386" crossOrigin="anonymous"></script>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
