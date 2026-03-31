@@ -1,36 +1,31 @@
-import Link from 'next/link';
-import { getAllPosts } from '@/lib/posts';
+import Link from 'next/link'
+import { getAllPosts } from '@/lib/posts'
 
 export default function BlogPage() {
-  const posts = getAllPosts();
-  const GENRE_ICONS: Record<string, string> = {
-    haircolor: '🎨', haircare: '✨', skincare: '🌸', nail: '💅', supplement: '💊',
-  };
+  const posts = getAllPosts()
   return (
-    <div className="container">
-      <section className="section">
-        <h1 className="section-title">記事一覧</h1>
+    <main>
+      <header className="site-header">
+        <div className="site-title">Makeup Lab</div>
+        <div className="site-subtitle">Blog</div>
+      </header>
+      <main>
+        <div className="section-label">Articles</div>
         {posts.length === 0 ? (
-          <div className="empty">
-            <div className="empty-icon">📝</div>
-            <p>まだ記事がありません。</p>
-          </div>
+          <p style={{color:'var(--text-secondary)', fontSize:'0.85rem', padding:'2rem 0'}}>
+            記事準備中です。
+          </p>
         ) : (
-          <div className="post-grid">
-            {posts.map(post => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="post-card">
-                <div className="post-card-thumb">{GENRE_ICONS[post.genre] || '📄'}</div>
-                <div className="post-card-body">
-                  <p className="post-card-genre">{post.genre}</p>
-                  <h2 className="post-card-title">{post.title}</h2>
-                  <p className="post-card-excerpt">{post.excerpt}</p>
-                  <p className="post-card-date">{post.date}</p>
-                </div>
-              </Link>
+          <div className="article-list">
+            {posts.map((post, i) => (
+              <div key={post.slug} className="article-item">
+                <span className="article-num">{String(i+1).padStart(2,'0')}</span>
+                <Link href={`/blog/${post.slug}`} className="article-link">{post.title}</Link>
+              </div>
             ))}
           </div>
         )}
-      </section>
-    </div>
-  );
+      </main>
+    </main>
+  )
 }
