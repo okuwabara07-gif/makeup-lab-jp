@@ -136,7 +136,7 @@ async function main() {
   const blogDir = path.join(process.cwd(),'content/blog');
   if(!fs.existsSync(blogDir)) fs.mkdirSync(blogDir,{recursive:true});
   const keywords = ["メイク おすすめ", "コスメ ランキング", "メイク 初心者", "プチプラ コスメ", "メイク 方法"];
-  for(const kw of keywords.slice(0,3)) {
+  for(const kw of keywords.slice(0, 5)) {
     try {
       const content = await generateArticle(kw);
       const filename = `${Date.now()}-${kw.replace(/[^a-zA-Z0-9぀-鿿]/g,'-')}.mdx`;
