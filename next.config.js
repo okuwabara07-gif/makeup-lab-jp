@@ -1,3 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-module.exports = nextConfig
+const nextConfig = {
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  transpilePackages: ['next-mdx-remote'],
+};
+module.exports = nextConfig;
