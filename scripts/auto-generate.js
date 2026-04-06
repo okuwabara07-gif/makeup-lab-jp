@@ -178,7 +178,7 @@ async function main() {
   for(const kw of keywords.slice(0, 5)) {
     try {
       const content = await generateArticle(kw);
-      const filename = `${Date.now()}-${kw.replace(/[^a-zA-Z0-9぀-鿿]/g,'-')}.mdx`;
+      const filename = `${Date.now()}.mdx`;
       fs.writeFileSync(path.join(blogDir,filename),content);
       console.log(`✅ ${filename}`);
       await new Promise(r=>setTimeout(r,3000));
