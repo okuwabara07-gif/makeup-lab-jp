@@ -136,6 +136,11 @@ ${CRITERIA.split('・').map(c=>`| ${c} | ★★★★★ | コメント |`).join
 | 品質重視 | 商品A | ○○ |
 | プレゼント用 | 商品C | ○○ |
 
+
+## 関連画像
+
+![関連商品イメージ](https://source.unsplash.com/800x400/?beauty,product,lifestyle)
+
 ## よくある質問
 
 Q：どこで買うのが一番安い？
