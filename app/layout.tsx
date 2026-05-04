@@ -16,7 +16,14 @@ export const metadata: Metadata = {
     title: 'メイクLab',
     description: 'メイク・コスメ情報メディア',
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
